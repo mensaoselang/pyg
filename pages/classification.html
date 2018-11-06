@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/classification.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="search">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+   <!-- 内容 -->
+   <div class="main">
+       <!-- 左边 -->
+       <div class="left_menu">
+           <ul>
+           </ul>
+       </div>
+       <!-- 右边 -->
+       <div class="right_menu">
+           <!-- 二级分类 -->
+           
+       </div>
+   </div>
+    <!-- 底部 -->
+    <footer>
+        <a href="javascript:;">
+            <span class="fa fa-home"></span>
+            <div class="ft_name">首页</div>
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-list-ul"></span>
+            <div class="ft_name">分类</div>
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-shopping-cart"></span>
+            <div class="ft_name">购物车</div>
+        </a>
+        <a href="javascript:;">
+            <span class="fa fa-user-circle-o"></span>
+            <div class="ft_name">我的</div>
+        </a>
+    </footer>
+</body>
+
+</html>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/classification.js"></script>
+<!-- 左边模板 -->
+<script type="text/template" id="leftTemplate">
+ {{each data val index}}
+   {{if index==0}}
+   <li class="active">{{val.cat_name}}</li>
+   {{/if}}
+   {{if index!=0}}
+   <li>{{val.cat_name}}</li>
+   {{/if}}
+ {{/each}}
+</script>
+<!-- 右边模板 -->
+<script type="text/template" id="rightTemplate">
+  {{each data value1 index1}}
+  <div class="cationTwo">
+    <div class="ct_title">
+     {{value1.cat_name}}
+    </div>
+   
+    <ul class="ct_content">
+            {{each value1.children value2 index2}}
+      
+            <li>
+                <a href="javascript:;">
+                    <img src="http://api.pyg.ak48.xyz/{{value2.cat_icon}}" alt="">
+                </a>
+                <span>
+                   {{value2.cat_name}}
+                </span>
+            </li>
+      
+        {{/each}}
+    </ul>
+  
+</div>
+  {{/each}}
+</script>

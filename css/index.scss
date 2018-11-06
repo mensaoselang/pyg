@@ -1,0 +1,39 @@
+// 引入公共样式
+@import "./_common.scss";
+// 导航
+.nav{
+    display: flex;
+
+    a{
+        padding: 10px;
+    }
+}
+//商品列表
+.lists{
+    padding: 0 10px;
+    .lists_content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include ul_reste();
+         li{
+            margin-top: 5px;
+            width: 48%;
+            .goods_name{
+                font-size: 14px;
+                color: #000;
+                height: 45px;
+                overflow: hidden;
+            }
+            .goods_price{
+                font-size: 16px;
+                color: red;
+            }
+            .goods_like{
+                width: 80px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}

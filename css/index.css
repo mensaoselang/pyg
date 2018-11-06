@@ -1,0 +1,116 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  overflow: scroll;
+}
+
+.search {
+  height: 45px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  z-index: 100;
+}
+
+footer {
+  height: 45px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #ccc;
+  padding-top: 3px;
+}
+
+footer a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #000;
+  text-align: center;
+}
+
+footer a .fa {
+  font-size: 20px;
+}
+
+footer a .ft_name {
+  font-size: 13px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav a {
+  padding: 10px;
+}
+
+.lists {
+  padding: 0 10px;
+}
+
+.lists .lists_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lists .lists_content li {
+  margin-top: 5px;
+  width: 48%;
+}
+
+.lists .lists_content li .goods_name {
+  font-size: 14px;
+  color: #000;
+  height: 45px;
+  overflow: hidden;
+}
+
+.lists .lists_content li .goods_price {
+  font-size: 16px;
+  color: red;
+}
+
+.lists .lists_content li .goods_like {
+  width: 80px;
+  margin: 0 auto;
+  display: block;
+}
+/*# sourceMappingURL=index.css.map */

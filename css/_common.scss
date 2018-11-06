@@ -1,0 +1,65 @@
+html,
+body {
+   height:100%;
+   width: 100%;
+}
+
+body {
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+//内容
+.main{
+    height: 100%;
+    overflow:scroll;
+}
+//头部搜索框
+.search {
+    height: 45px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    z-index: 100;
+}
+//
+//底部
+footer {
+    height: 45px;
+    width: 100%;
+    background-color:#fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding-top: 3px;
+    // align-items: center;
+    a {
+        flex: 1;
+        color: #000;
+        text-align: center;
+        .fa {
+            font-size: 20px;
+        }
+
+        .ft_name {
+            font-size: 13px;
+        }
+    }
+}
+
+// 初始化ul样式
+@mixin ul_reste() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

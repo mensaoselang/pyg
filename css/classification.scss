@@ -1,0 +1,49 @@
+//引入公共样式
+@import "../css/_common.scss";
+.main{
+    overflow: hidden;
+    display: flex;
+}
+.left_menu{
+    overflow: scroll;
+    text-align: center;
+    ul{
+        @include ul_reste();
+        li{
+            width: 80px;
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        .active{
+            background-color: #fff;
+            border-left: 3px solid skyblue;
+        }
+    }
+}
+.right_menu{
+    overflow: scroll;
+    flex: 1;
+    background-color: #fff;
+    .ct_title{
+        font-size: 14px;
+        padding-left: 12px;
+    }
+    .ct_content{
+            @include ul_reste();
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: 33.33%;
+                text-align: center;
+                img{
+                    width: 70%;
+                    margin: 0 auto;
+                }
+                span{
+                  
+                    font-size: 13px;
+                }
+            }
+           
+    }
+}
