@@ -63,6 +63,30 @@ footer a .ft_name {
   font-size: 13px;
 }
 
+.waiting::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .3;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.waiting::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("../static/images/girls.gif") no-repeat center center;
+  background-size: cover;
+  z-index: 1001;
+}
+
 .main {
   overflow: hidden;
   display: -webkit-box;
@@ -71,29 +95,37 @@ footer a .ft_name {
 }
 
 .left_menu {
-  overflow: scroll;
-  text-align: center;
+  overflow: hidden;
+  width: .8rem;
 }
 
-.left_menu ul {
+.left_menu .menu_wrap {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.left_menu ul li {
-  width: 80px;
-  padding: 5px 0;
-  font-size: 14px;
+.left_menu .menu_wrap li {
+  height: .4rem;
+  font-size: .16rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.left_menu ul .active {
+.left_menu .menu_wrap .active {
   background-color: #fff;
   border-left: 3px solid skyblue;
 }
 
 .right_menu {
-  overflow: scroll;
+  overflow: hidden;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -101,8 +133,16 @@ footer a .ft_name {
 }
 
 .right_menu .ct_title {
-  font-size: 14px;
-  padding-left: 12px;
+  font-size: .14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: .4rem;
+  padding-left: .1rem;
+  color: skyblue;
 }
 
 .right_menu .ct_content {
@@ -127,6 +167,6 @@ footer a .ft_name {
 }
 
 .right_menu .ct_content li span {
-  font-size: 13px;
+  font-size: .13rem;
 }
 /*# sourceMappingURL=classification.css.map */

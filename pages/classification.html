@@ -22,18 +22,17 @@
    <div class="main">
        <!-- 左边 -->
        <div class="left_menu">
-           <ul>
+           <ul class="menu_wrap">
            </ul>
        </div>
        <!-- 右边 -->
        <div class="right_menu">
            <!-- 二级分类 -->
-           
        </div>
    </div>
     <!-- 底部 -->
     <footer>
-        <a href="javascript:;">
+        <a href="../index.html">
             <span class="fa fa-home"></span>
             <div class="ft_name">首页</div>
         </a>
@@ -58,6 +57,8 @@
 <script src="../lib/arttemplate/template-web.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/classification.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+
 <!-- 左边模板 -->
 <script type="text/template" id="leftTemplate">
  {{each data val index}}
@@ -71,6 +72,7 @@
 </script>
 <!-- 右边模板 -->
 <script type="text/template" id="rightTemplate">
+ <div>
   {{each data value1 index1}}
   <div class="cationTwo">
     <div class="ct_title">
@@ -94,4 +96,5 @@
   
 </div>
   {{/each}}
+</div>
 </script>

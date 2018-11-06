@@ -1,49 +1,68 @@
 //引入公共样式
 @import "../css/_common.scss";
-.main{
+
+.main {
     overflow: hidden;
     display: flex;
 }
-.left_menu{
-    overflow: scroll;
-    text-align: center;
-    ul{
+
+//左边标题
+.left_menu {
+    overflow: hidden;
+    width: .8rem;
+
+    .menu_wrap {
         @include ul_reste();
-        li{
-            width: 80px;
-            padding: 5px 0;
-            font-size: 14px;
+
+        li {
+            height: .4rem;
+            font-size: .16rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .active{
+
+        .active {
             background-color: #fff;
             border-left: 3px solid skyblue;
         }
     }
 }
-.right_menu{
-    overflow: scroll;
+
+//右边商品信息
+.right_menu {
+    overflow: hidden;
     flex: 1;
     background-color: #fff;
-    .ct_title{
-        font-size: 14px;
-        padding-left: 12px;
+
+    .ct_title {
+        font-size: .14rem;
+        display: flex;
+        align-items: center;
+        height: .4rem;
+        padding-left: .1rem;
+        color: skyblue;
     }
-    .ct_content{
-            @include ul_reste();
-            display: flex;
-            flex-wrap: wrap;
-            li{
-                width: 33.33%;
-                text-align: center;
-                img{
-                    width: 70%;
-                    margin: 0 auto;
-                }
-                span{
-                  
-                    font-size: 13px;
-                }
+
+    .ct_content {
+        @include ul_reste();
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 33.33%;
+            text-align: center;
+
+            img {
+                width: 70%;
+                margin: 0 auto;
             }
-           
+
+            span {
+
+                font-size: .13rem;
+            }
+        }
+
     }
 }

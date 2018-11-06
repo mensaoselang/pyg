@@ -63,6 +63,30 @@ footer a .ft_name {
   font-size: 13px;
 }
 
+.waiting::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .3;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.waiting::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("../static/images/girls.gif") no-repeat center center;
+  background-size: cover;
+  z-index: 1001;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
